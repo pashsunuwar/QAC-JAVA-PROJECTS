@@ -13,6 +13,7 @@ public class MakeTea {
 			System.out.println("Add milk & Serve tea");
 		}else {
 			System.out.println("Serve tea");
+			
 		}
 	}
 }
