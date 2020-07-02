@@ -33,6 +33,26 @@ public class Runner {
 				.get(nums.size()-1); //max
 		System.out.println(maxmin);
 	
+		List<Integer> even = nums.stream()
+				.map(s -> Integer.valueOf(s))
+//				.filter(x -> x % 2 == 0) //prints even numbers
+				.filter(x -> x % 2 == 1) //prints odd numbers
+				.collect(Collectors.toList());
+		System.out.println(even);
+		
+		int sum =
+				nums.stream()
+				.reduce((a,b) -> a+b)
+				.get();
+		System.out.println(sum);
+		
+		List<Integer> square = 
+				nums.stream()
+				.map(x -> x*x)
+				.filter(x -> x % 2 == 0)
+				.collect(Collectors.toList());
+				
+		System.out.println(square);
 		
 		
 //		List<String> numbers = Arrays.asList("1", "2", "3", "4", "5", "6");
